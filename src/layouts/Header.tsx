@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from 'react';
-import { Bell, Search, UserCircle, LogOut, Settings, User, AlertTriangle, CheckCircle } from 'lucide-react';
+import { Bell, Search, UserCircle, LogOut, Settings, User, AlertTriangle, CheckCircle, Menu } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Input } from '@/components/ui/Input';
 
-export function Header() {
+export function Header({ onMenuClick }: { onMenuClick?: () => void }) {
   const navigate = useNavigate();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -48,8 +48,14 @@ export function Header() {
   };
 
   return (
-    <header className="h-16 border-b bg-white border-gray-200 flex items-center justify-between px-6 sticky top-0 z-10 w-full">
-      <div className="w-96 flex flex-col relative" ref={searchRef}>
+    <header className="h-16 border-b bg-white border-gray-200 flex items-center justify-between px-4 md:px-6 sticky top-0 z-10 w-full">
+      <div className="flex items-center w-full max-w-[200px] md:max-w-none md:w-96 relative" ref={searchRef}>
+        <button 
+          onClick={onMenuClick}
+          className="p-2 -ml-2 mr-2 text-gray-500 hover:bg-gray-100 rounded-md lg:hidden flex-shrink-0"
+        >
+          <Menu className="w-5 h-5" />
+        </button>
         <div className="relative w-full">
           <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-500" />
           <Input 
