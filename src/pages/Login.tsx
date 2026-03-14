@@ -9,7 +9,7 @@ export function Login() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate login
+    // Simulate login process
     navigate('/');
   };
 

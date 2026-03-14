@@ -7,7 +7,7 @@ import { DashboardServiceAPI } from '@/services/dashboardService';
 // Layout Container
 import { ChartContainer } from '@/components/dashboard/ChartContainer';
 
-// Individual Chart Components
+// Individual Chart Components used for Machine Analytics
 import { FailureTrendChart } from '@/components/charts/FailureTrendChart';
 import { MaintenanceCostChart } from '@/components/charts/MaintenanceCostChart';
 import { PowerConsumptionChart } from '@/components/charts/PowerConsumptionChart';
