@@ -148,10 +148,10 @@ export function Header({ onMenuClick }: { onMenuClick?: () => void }) {
                 <p className="text-sm font-semibold text-gray-800">Admin User</p>
                 <p className="text-xs text-gray-500">admin@factory.com</p>
               </div>
-              <button className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-slate-50 flex items-center gap-2" onClick={() => navigate('/admin')}>
+              <button className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-slate-50 flex items-center gap-2" onClick={() => { setIsAccountOpen(false); navigate('/profile'); }}>
                 <User className="w-4 h-4" /> Profile
               </button>
-              <button className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-slate-50 flex items-center gap-2" onClick={() => navigate('/admin')}>
+              <button className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-slate-50 flex items-center gap-2" onClick={() => { setIsAccountOpen(false); navigate('/profile'); }}>
                 <Settings className="w-4 h-4" /> Settings
               </button>
               <div className="border-t border-gray-100 my-1"></div>

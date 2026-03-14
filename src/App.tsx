@@ -10,6 +10,7 @@ import { MachineDetails } from './pages/MachineDetails';
 import { Maintenance } from './pages/Maintenance';
 import { Reports } from './pages/Reports';
 import { Admin } from './pages/Admin';
+import { Profile } from './pages/Profile';
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   // Mock auth check - always authenticated for now
@@ -38,6 +39,7 @@ function App() {
           <Route path="maintenance" element={<Maintenance />} />
           <Route path="reports" element={<Reports />} />
           <Route path="admin" element={<Admin />} />
+          <Route path="profile" element={<Profile />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
